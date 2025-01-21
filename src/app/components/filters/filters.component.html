@@ -1,0 +1,34 @@
+<div class="filters">
+  <div class="option">
+    <select name="sortBy" id="sort" (change)="optionChange('sort', $event)">
+      <option value="" disabled selected>Sort By</option>
+      <option value="l2h">Price Low To High</option>
+      <option value="h2l">Price High To Low</option>
+    </select>
+  </div>
+
+  <div class="option">
+    <select (change)="optionChange('priceRange', $event)">
+      <option value="" disabled selected>Price Range</option>
+      <option *ngFor="let data of priceRangeOptions" value="{{ data.value }}">
+        Price: {{ data.name }}
+      </option>
+    </select>
+  </div>
+  <div class="option">
+    <select (change)="optionChange('rating', $event)">
+      <option value="" disabled selected>Rating</option>
+      <option *ngFor="let data of ratings" value="{{ data.value }}">
+        {{ data.name }}
+      </option>
+    </select>
+  </div>
+  <div class="option">
+    <select (change)="optionChange('category', $event)">
+      <option value="" disabled selected>Category</option>
+      <option *ngFor="let data of categoriesFilter" value="{{ data.value }}">
+        {{ data.name | titlecase }}
+      </option>
+    </select>
+  </div>
+</div>

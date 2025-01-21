@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+<app-filters></app-filters>
+
+@if (productsData.length) {
+<h2 class="total-products">Total Products: {{ productsData.length }}</h2>
+<div class="cards-container">
+  <div *ngFor="let data of productsData">
+    <app-cards [cardObj]="data"></app-cards>
+  </div>
+</div>
+} @else {
+<h2 class="total-products">No Products Available</h2>
+}
+
+<app-loader *ngIf="loading"></app-loader>

@@ -1,0 +1,15 @@
+<div class="card" *ngIf="cardObj" (click)="openModal()">
+  <img src="{{ cardObj.image }}" class="card-img-top image" alt="..." />
+  <div class="card-body">
+    <p class="card-title title">{{ cardObj.title }}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item price-rating">
+      <span>
+        <b>{{ cardObj.price | currency : "INR" }}</b></span
+      >
+      <span>{{ cardObj.rating.rate }}★</span>
+    </li>
+    <li class="list-group-item">{{ cardObj.category | titlecase }}</li>
+  </ul>
+</div>

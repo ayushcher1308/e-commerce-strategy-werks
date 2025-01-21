@@ -1,0 +1,34 @@
+.card {
+  width: 18rem;
+  height: 25rem;
+  margin: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.image {
+  width: 90%;
+  max-width: fit-content;
+  height: 50%;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  line-height: 1.4; /* Control line spacing */
+  min-height: calc(25px * 2); /* Line height * number of lines (2) */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+}
+
+.price-rating {
+  display: flex;
+  justify-content: space-between;
+}
+

@@ -1,0 +1,15 @@
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.total-products {
+    margin: 5px;
+    font-size: 15px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .cards-container {
+        justify-content: center;
+    }
+  }

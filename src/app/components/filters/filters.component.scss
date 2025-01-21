@@ -1,0 +1,16 @@
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 60px;
+    background-color: white;
+    z-index: 20;
+}
+
+.option {
+    margin: 5px;
+}
+
+input{
+    margin-top: 5px;
+}
